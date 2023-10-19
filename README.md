@@ -19,7 +19,7 @@ provider :yahoojp, YJ_CLIENT_ID, YJ_CLIENT_SECRET,
 ## Installation
 
 ```ruby
-gem 'nov-omniauth-yahoojp'
+gem 'nov-omniauth-yahoojp', require: 'omniauth-yahoojp'
 ```
 
 ## License
