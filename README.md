@@ -6,7 +6,15 @@ And Yahoo! JAPAN start rejecting UserInfo API access for many existing RPs.
 
 This fork enables ID Token access w/o UserInfo API access.
 
-In your `config/initializers/omniauth.rb`, specify `userinfo_access: false` like below.
+In your `config/initializers/omniauth.rb`, specify `userinfo_access: false`.
+
+## Installation
+
+```ruby
+gem 'nov-omniauth-yahoojp', require: 'omniauth-yahoojp'
+```
+
+## Examples
 
 ```ruby
 provider :yahoojp, YJ_CLIENT_ID, YJ_CLIENT_SECRET,
@@ -16,11 +24,11 @@ provider :yahoojp, YJ_CLIENT_ID, YJ_CLIENT_SECRET,
          }
 ```
 
-## Installation
+## Limitation
 
-```ruby
-gem 'nov-omniauth-yahoojp', require: 'omniauth-yahoojp'
-```
+You cannot get any profile information (including `email` etc.) but only `sub` is available.
+
+It won't be useful for RPs which want to let new users **_sign-up_** with Yahoo! JAPAN, but it's still useful for existing RPs which want to let exsiting users **_sign-in_** with Yahoo! JAPAN.
 
 ## License
 
