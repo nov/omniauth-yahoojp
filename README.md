@@ -9,7 +9,11 @@ This fork enables ID Token access w/o UserInfo API access.
 In your `config/initializers/omniauth.rb`, specify `userinfo_access: false` like below.
 
 ```ruby
-provider :yahoojp, YJ_CLIENT_ID, YJ_CLIENT_SECRET, { scope: 'openid', userinfo_access: false }
+provider :yahoojp, YJ_CLIENT_ID, YJ_CLIENT_SECRET,
+         {
+           scope: 'openid',
+           userinfo_access: false
+         }
 ```
 
 ## Installation
